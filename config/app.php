@@ -1,4 +1,5 @@
 <?php
+use App\Services\Encounter\EncounterFacade;
 use App\Services\Lampa\LampaFacade;
 
 return [
@@ -159,6 +160,7 @@ return [
 
         Telegram\Bot\Laravel\TelegramServiceProvider::class,
         \App\Providers\LampaProvider::class,
+        \App\Providers\EncounterProvider::class,
     ],
 
     /*
@@ -206,5 +208,6 @@ return [
 
         'Tg'  => Telegram\Bot\Laravel\Facades\Telegram::class,
         'Lampa'  => LampaFacade::class,
+        'Encounter'  => EncounterFacade::class,
     ],
 ];
